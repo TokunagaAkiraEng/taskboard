@@ -6,8 +6,30 @@ This file provides guidance to Claude Code when working on the taskboard-app pro
 
 taskboard-app is a task board (Kanban-style) application.
 
-- **Stack**: React + TypeScript (frontend only)
-- **State**: local component state / localStorage (no backend at this stage)
+## デプロイ先
+
+https://tokunagaakiraeng.github.io/taskboard/
+
+- `main` ブランチへの push をトリガーに GitHub Actions（`.github/workflows/deploy.yml`）が自動ビルド・デプロイする
+- `vite.config.ts` の `base` はこのデプロイ先パス（`/taskboard/`）と一致させること
+
+## 技術スタック
+
+- **フレームワーク**: React 19 + TypeScript
+- **ビルドツール**: Vite 8
+- **Lint**: oxlint
+- **状態管理**: React のローカル state（カスタムフック `useTasks`）＋ `localStorage` への永続化
+- **ルーティング**: なし（単一画面）
+- **バックエンド**: なし（フロントエンドのみ）
+- **スタイリング**: 通常の CSS（`App.css` / `index.css`）、CSS-in-JS やユーティリティ CSS フレームワークは未使用
+
+## コンポーネントの命名規約
+
+- コンポーネントファイル・関数名は英語のパスコンドケース（例：`App.tsx` → `function App()`）
+- カスタムフックは `use` から始まるキャメルケース（例：`useTasks.ts` → `useTasks()`）
+- 型定義は `types.ts` に集約し、型名は英語のパスコンドケース（例：`Task`）
+- CSS クラス名は英語のケバブケース（例：`task-item`, `task-form`, `delete-button`）
+- 状態変更を伴う関数名は動詞始まり（例：`addTask`, `toggleTask`, `deleteTask`）
 
 ## Git Workflow
 
