@@ -18,6 +18,15 @@ taskboard-app is a task board (Kanban-style) application.
 - Do not force-push, rewrite history, or skip commit hooks unless explicitly instructed.
 - If a push fails (e.g., no remote configured yet, or conflicts), stop and inform the user rather than working around it silently.
 
+## コーディング規約
+
+- コメントは日本語で書く
+- 変数名は英語のキャメルケース（例：userName）を使う
+
+## 返答ルール
+
+- 返答は必ず日本語で行う
+
 ## Development Notes
 
 (Add build/test/lint commands here once the project is scaffolded.)
