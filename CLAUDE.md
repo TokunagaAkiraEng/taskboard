@@ -27,6 +27,13 @@ taskboard-app is a task board (Kanban-style) application.
 
 - 返答は必ず日本語で行う
 
+## 禁止事項
+
+- `rm -rf` コマンドは絶対に実行しない
+- `.env` ファイルを読んだり変更したりしない
+- `package.json` の依存パッケージを無断で変更しない
+- データベースへの削除操作（DELETE文）を実行しない
+
 ## Development Notes
 
 (Add build/test/lint commands here once the project is scaffolded.)
